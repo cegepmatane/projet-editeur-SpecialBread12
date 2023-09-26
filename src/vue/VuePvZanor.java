@@ -2,19 +2,19 @@ package vue;
 import com.sun.media.jfxmedia.logging.Logger;
 
 import architecture.Vue;
-import controleur.ControleurJardinator;
+import controleur.ControleurPvZanor;
 
-public class VueJardinator extends Vue {
+public class VuePvZanor extends Vue {
 
-	protected ControleurJardinator controleur;
-	protected static VueJardinator instance = null; 
-	public static VueJardinator getInstance() {if(null==instance)instance = new VueJardinator();return VueJardinator.instance;}; 
+	protected ControleurPvZanor controleur;
+	protected static VuePvZanor instance = null; 
+	public static VuePvZanor getInstance() {if(null==instance)instance = new VuePvZanor();return VuePvZanor.instance;}; 
 	
-	private VueJardinator() 
+	private VuePvZanor() 
 	{
-		super("jardinator.fxml", VueJardinator.class, 1294,743);
-		super.controleur = this.controleur = new ControleurJardinator();
-		Logger.logMsg(Logger.INFO, "new VueJardinator()");
+		super("PvZanor.fxml", VuePvZanor.class, 1294,743);
+		super.controleur = this.controleur = new ControleurPvZanor();
+		Logger.logMsg(Logger.INFO, "new VuePvZanor()");
 	}
 		
 	public void activerControles()

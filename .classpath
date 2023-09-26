@@ -8,5 +8,13 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/architecture.jar"/>
+	<classpathentry kind="lib" path="C:/Librairie/java/openjfx/lib/javafx.base.jar"/>
+	<classpathentry kind="lib" path="C:/Librairie/java/openjfx/lib/javafx.controls.jar"/>
+	<classpathentry kind="lib" path="C:/Librairie/java/openjfx/lib/javafx.fxml.jar"/>
+	<classpathentry kind="lib" path="C:/Librairie/java/openjfx/lib/javafx.graphics.jar"/>
+	<classpathentry kind="lib" path="C:/Librairie/java/openjfx/lib/javafx.media.jar"/>
+	<classpathentry kind="lib" path="C:/Librairie/java/openjfx/lib/javafx.swing.jar"/>
+	<classpathentry kind="lib" path="C:/Librairie/java/openjfx/lib/javafx.web.jar"/>
+	<classpathentry kind="lib" path="C:/Librairie/java/openjfx/lib/javafx-swt.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

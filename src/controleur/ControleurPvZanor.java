@@ -4,9 +4,9 @@ import com.sun.media.jfxmedia.logging.Logger;
 
 import architecture.Controleur;
 
-public class ControleurJardinator extends Controleur{
+public class ControleurPvZanor extends Controleur{
 
-	public ControleurJardinator()
+	public ControleurPvZanor()
 	{
 		Logger.logMsg(Logger.INFO, "new ControleurJardinator()");
 	}
