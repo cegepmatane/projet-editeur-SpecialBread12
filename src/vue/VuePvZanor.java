@@ -3,6 +3,7 @@ import com.sun.media.jfxmedia.logging.Logger;
 
 import architecture.Vue;
 import controleur.ControleurPvZanor;
+import javafx.scene.control.Button;
 
 public class VuePvZanor extends Vue {
 
@@ -21,6 +22,8 @@ public class VuePvZanor extends Vue {
 	{
 		super.activerControles();
 		
+		
+		//Button actionToucherPlante = (Button) lookup("#emplacement-1");
 		/*
 		Button actionCalculatrice = (Button) lookup("#action-calculatrice");
 		actionCalculatrice.setOnAction(new EventHandler<ActionEvent>() 
