@@ -3,6 +3,9 @@ package controleur;
 import com.sun.media.jfxmedia.logging.Logger;
 
 import architecture.Controleur;
+import javafx.scene.image.ImageView;
+import modele.Terrain;
+import modele.Terrain.TERRAIN;
 
 public class ControleurPvZanor extends Controleur{
 
@@ -15,5 +18,6 @@ public class ControleurPvZanor extends Controleur{
 	{
 		
 	}
+	
 
 }

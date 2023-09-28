@@ -14,14 +14,14 @@
    <children>
       <AnchorPane id="espace-travail" layoutY="-1.0" prefHeight="744.0" prefWidth="1294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
          <children>
-            <ImageView fitHeight="743.0" fitWidth="1294.0" pickOnBounds="true">
+            <ImageView id="terrain" fx:id="terrain" fitHeight="743.0" fitWidth="1294.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../ArriereFond-Entree-Jour.png" />
+                  <Image url="@../ArriereFond-Entree-Jour.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="100.0" fitWidth="972.0" layoutX="201.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Menu-Plantes.png" />
+                  <Image url="@../Menu-Plantes.png" />
                </image>
             </ImageView>
             <Pane layoutX="6.0" layoutY="150.0" prefHeight="501.0" prefWidth="1207.0">

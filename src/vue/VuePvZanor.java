@@ -6,6 +6,9 @@ import controleur.ControleurPvZanor;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import modele.Terrain.TERRAIN;
 
 public class VuePvZanor extends Vue {
 
@@ -45,6 +48,8 @@ public class VuePvZanor extends Vue {
             }
         });
 		*/
-
+		ImageView imageTerrain = (ImageView)lookup("#terrain");
+		
+		imageTerrain.setImage(new Image("ArriereFond-Entree-Nuit.png"));
 	}
 }
