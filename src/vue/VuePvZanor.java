@@ -3,6 +3,8 @@ import com.sun.media.jfxmedia.logging.Logger;
 
 import architecture.Vue;
 import controleur.ControleurPvZanor;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 
 public class VuePvZanor extends Vue {
@@ -22,6 +24,14 @@ public class VuePvZanor extends Vue {
 	{
 		super.activerControles();
 		
+		Button test = (Button) lookup("#entree-jour");
+		test.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("BEAN");
+				
+			}});
 		
 		//Button actionToucherPlante = (Button) lookup("#emplacement-1");
 		/*
