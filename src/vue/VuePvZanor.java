@@ -27,8 +27,8 @@ public class VuePvZanor extends Vue {
 	{
 		super.activerControles();
 		
-		Button test = (Button)lookup("#entree-jour");
-		test.setOnAction(new EventHandler<>() {
+		Button entreeJour = (Button)lookup("#entree-jour");
+		entreeJour.setOnAction(new EventHandler<>() {
 
 			@Override
 			public void handle(ActionEvent arg0) {
