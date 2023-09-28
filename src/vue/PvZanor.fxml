@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane id="fenetre" prefHeight="743.0" prefWidth="1294.0" stylesheets="@decoration/jardinator.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -49,6 +50,12 @@
                   </GridPane>
                </children>
             </Pane>
+            <VBox layoutX="22.0" layoutY="4.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button id="entree-jour" fx:id="entreeJour" mnemonicParsing="false" text="Entree jour" />
+                  <Button id="entree-nuit" fx:id="entreNuit" mnemonicParsing="false" text="Entree Nuit" />
+               </children>
+            </VBox>
          </children>
       </AnchorPane>
    </children>
