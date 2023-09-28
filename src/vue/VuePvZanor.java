@@ -168,6 +168,14 @@ public class VuePvZanor extends Vue {
 				
 			}});
 		
+		Button zombie1 = (Button)lookup("#zombie1");
+		zombie1.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("Clic sur zombie1");
+				
+			}});
 		
 		
 
