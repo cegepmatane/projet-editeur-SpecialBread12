@@ -27,15 +27,92 @@ public class VuePvZanor extends Vue {
 	{
 		super.activerControles();
 		
-		Button test = (Button) lookup("#entree-jour");
+		Button test = (Button)lookup("#entree-jour");
 		test.setOnAction(new EventHandler<>() {
 
 			@Override
 			public void handle(ActionEvent arg0) {
-				System.out.println("BEAN");
+				System.out.println("entree jour");
 				
 			}});
 		
+		
+		Button emplacement1 = (Button)lookup("#emplacement-1");
+		emplacement1.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("emplacement1");
+				
+			}});
+		Button emplacement2 = (Button)lookup("#emplacement-2");
+		emplacement2.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("emplacement2");
+				
+			}});
+		Button emplacement3 = (Button)lookup("#emplacement-3");
+		emplacement3.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("emplacement3");
+				
+			}});
+		Button emplacement4 = (Button)lookup("#emplacement-4");
+		emplacement4.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("emplacement4");
+				
+			}});
+		Button emplacement5 = (Button)lookup("#emplacement-5");
+		emplacement5.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("emplacement5");
+				
+			}});
+		
+		Button emplacement6 = (Button)lookup("#emplacement-6");
+		emplacement6.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("emplacement6");
+				
+			}});
+		
+		Button emplacement7 = (Button)lookup("#emplacement-7");
+		emplacement7.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("emplacement7");
+				
+			}});
+		
+		Button emplacement8 = (Button)lookup("#emplacement-8");
+		emplacement8.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("emplacement8");
+				
+			}});
+		
+		Button emplacement9 = (Button)lookup("#emplacement-9");
+		emplacement9.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("emplacement9");
+				
+			}});
 		//Button actionToucherPlante = (Button) lookup("#emplacement-1");
 		/*
 		Button actionCalculatrice = (Button) lookup("#action-calculatrice");

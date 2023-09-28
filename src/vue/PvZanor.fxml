@@ -42,15 +42,15 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="52.0" text="Button" />
-                        <Button id="choisir-carotte" fx:id="choisirCarotte" mnemonicParsing="false" prefHeight="60.0" prefWidth="159.0" textOverrun="CLIP" GridPane.columnIndex="1" />
-                        <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="2" />
-                        <Button mnemonicParsing="false" prefHeight="140.0" prefWidth="106.0" textOverrun="CLIP" GridPane.columnIndex="3" />
-                        <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="4" />
-                        <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="52.0" text="Button" GridPane.columnIndex="5" />
-                        <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="52.0" text="Button" GridPane.columnIndex="6" />
-                        <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="52.0" text="Button" GridPane.columnIndex="8" />
-                        <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="52.0" text="Button" GridPane.columnIndex="7" />
+                        <Button id="emplacement-1" fx:id="emplacement1" mnemonicParsing="false" prefHeight="150.0" prefWidth="65.0" />
+                        <Button id="emplacement-2" fx:id="emplacement2" mnemonicParsing="false" prefHeight="130.0" prefWidth="56.0" textOverrun="CLIP" GridPane.columnIndex="1" />
+                        <Button id="emplacement-3" fx:id="emplacement3" mnemonicParsing="false" prefHeight="118.0" prefWidth="62.0" textOverrun="CLIP" GridPane.columnIndex="2" />
+                        <Button id="emplacement-4" fx:id="emplacement4" mnemonicParsing="false" prefHeight="140.0" prefWidth="106.0" textOverrun="CLIP" GridPane.columnIndex="3" />
+                        <Button id="emplacement-5" fx:id="emplacement5" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="4" />
+                        <Button id="emplacement-6" fx:id="emplacement6" mnemonicParsing="false" prefHeight="82.0" prefWidth="180.0" GridPane.columnIndex="5" />
+                        <Button id="emplacement-7" fx:id="emplacement7" mnemonicParsing="false" prefHeight="82.0" prefWidth="134.0" GridPane.columnIndex="6" />
+                        <Button id="emplacement-8" fx:id="emplacement8" mnemonicParsing="false" prefHeight="82.0" prefWidth="153.0" GridPane.columnIndex="7" />
+                        <Button id="emplacement-9" fx:id="emplacement9" mnemonicParsing="false" prefHeight="184.0" prefWidth="62.0" GridPane.columnIndex="8" />
                      </children>
                   </GridPane>
                </children>
