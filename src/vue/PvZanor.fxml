@@ -42,10 +42,15 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
+                        <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="52.0" text="Button" />
                         <Button id="choisir-carotte" fx:id="choisirCarotte" mnemonicParsing="false" prefHeight="60.0" prefWidth="159.0" textOverrun="CLIP" GridPane.columnIndex="1" />
                         <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="2" />
                         <Button mnemonicParsing="false" prefHeight="140.0" prefWidth="106.0" textOverrun="CLIP" GridPane.columnIndex="3" />
                         <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="4" />
+                        <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="52.0" text="Button" GridPane.columnIndex="5" />
+                        <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="52.0" text="Button" GridPane.columnIndex="6" />
+                        <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="52.0" text="Button" GridPane.columnIndex="8" />
+                        <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="52.0" text="Button" GridPane.columnIndex="7" />
                      </children>
                   </GridPane>
                </children>
