@@ -58,7 +58,11 @@
             <VBox layoutX="22.0" layoutY="4.0" prefHeight="200.0" prefWidth="100.0">
                <children>
                   <Button id="entree-jour" fx:id="entreeJour" mnemonicParsing="false" text="Entree jour" />
-                  <Button id="entree-nuit" fx:id="entreNuit" mnemonicParsing="false" text="Entree Nuit" />
+                  <Button id="entree-nuit" fx:id="entreNuit" mnemonicParsing="false" text="Entree nuit" />
+                  <Button id="piscine-jour" fx:id="piscineJour" mnemonicParsing="false" text="Piscine jour" />
+                  <Button id="piscine-nuit" fx:id="piscineNuit" mnemonicParsing="false" text="Piscine nuit" />
+                  <Button id="toit-jour" fx:id="toitJour" mnemonicParsing="false" text="Toit jour" />
+                  <Button id="toit-nuit" fx:id="toitNuit" mnemonicParsing="false" text="Toit nuit" />
                </children>
             </VBox>
          </children>

@@ -49,6 +49,47 @@ public class VuePvZanor extends Vue {
 				imageTerrain.setImage(new Image("ArriereFond-Entree-Nuit.png"));
 			}});
 		
+		Button piscineJour = (Button)lookup("#piscine-jour");
+		piscineJour.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("piscine jour");
+				ImageView imageTerrain = (ImageView)lookup("#terrain");
+				
+				imageTerrain.setImage(new Image("ArriereFond-Piscine-Jour.png"));
+			}});
+		Button piscineNuit = (Button)lookup("#piscine-nuit");
+		piscineNuit.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("piscine nuit");
+				ImageView imageTerrain = (ImageView)lookup("#terrain");
+				
+				imageTerrain.setImage(new Image("ArriereFond-Piscine-Nuit.png"));
+			}});
+		Button toitJour = (Button)lookup("#toit-jour");
+		toitJour.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("toit jour");
+				ImageView imageTerrain = (ImageView)lookup("#terrain");
+				
+				imageTerrain.setImage(new Image("ArriereFond-Toit-Jour.png"));
+			}});
+		
+		Button toitNuit = (Button)lookup("#toit-nuit");
+		toitNuit.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("toit nuit");
+				ImageView imageTerrain = (ImageView)lookup("#terrain");
+				
+				imageTerrain.setImage(new Image("ArriereFond-Toit-Nuit.png"));
+			}});
 		
 		Button emplacement1 = (Button)lookup("#emplacement-1");
 		emplacement1.setOnAction(new EventHandler<>() {
