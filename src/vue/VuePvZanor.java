@@ -33,7 +33,20 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("entree jour");
+				ImageView imageTerrain = (ImageView)lookup("#terrain");
 				
+				imageTerrain.setImage(new Image("ArriereFond-Entree-Jour.png"));
+			}});
+		
+		Button entreeNuit = (Button)lookup("#entree-nuit");
+		entreeNuit.setOnAction(new EventHandler<>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				System.out.println("entree nuit");
+				ImageView imageTerrain = (ImageView)lookup("#terrain");
+				
+				imageTerrain.setImage(new Image("ArriereFond-Entree-Nuit.png"));
 			}});
 		
 		
@@ -113,20 +126,9 @@ public class VuePvZanor extends Vue {
 				System.out.println("emplacement9");
 				
 			}});
-		//Button actionToucherPlante = (Button) lookup("#emplacement-1");
-		/*
-		Button actionCalculatrice = (Button) lookup("#action-calculatrice");
-		actionCalculatrice.setOnAction(new EventHandler<ActionEvent>() 
-		{
-            @Override public void handle(ActionEvent e) 
-            {
-            	Logger.logMsg(Logger.INFO, "Bouton Calculatrice activé");
-            	controleur.notifierEvenement(ActionNavigation.CALCULATRICE);
-            }
-        });
-		*/
-		ImageView imageTerrain = (ImageView)lookup("#terrain");
 		
-		imageTerrain.setImage(new Image("ArriereFond-Entree-Nuit.png"));
+		
+		
+
 	}
 }
