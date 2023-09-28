@@ -8,7 +8,7 @@ public class ControleurPvZanor extends Controleur{
 
 	public ControleurPvZanor()
 	{
-		Logger.logMsg(Logger.INFO, "new ControleurJardinator()");
+		Logger.logMsg(Logger.INFO, "new ControleurPvZanor()");
 	}
 	
 	public void initialiser()
