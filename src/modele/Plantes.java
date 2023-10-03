@@ -1,14 +1,14 @@
 package modele;
 
 public class Plantes {
-	public enum PLANTES {
+	public enum PLANTES {}
 	protected PLANTES Plantes;
-		public PLANTES() {
+		public Plantes() {
 			
 		}
 		
-		public PLANTES(PLANTES Plantes) {
+		public Plantes(PLANTES Plantes) {
 			
 		}
-	}
+	
 }
