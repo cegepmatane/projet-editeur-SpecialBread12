@@ -10,6 +10,8 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import modele.Legume.LEGUME;
 import modele.Terrain.TERRAIN;
 
 public class VuePvZanor extends Vue {
@@ -226,6 +228,25 @@ public class VuePvZanor extends Vue {
 		
 		
 
+		
+	}
+	public void planterSemis(double x, double y, LEGUME legumeChoisi) {
+		//Ajouter la carotte dans le java
+		
+		ImageView legumePlantee = new ImageView();
+		if(legumeChoisi == LEGUME.CAROTTE) {
+		legumePlantee.setImage(new Image("vue/decoration/semis/carotte.png"));
+		}
+		if(legumeChoisi == LEGUME.CHOU) {
+		legumePlantee.setImage(new Image("vue/decoration/semis/chou.png"));
+		}
+		legumePlantee.setPreserveRatio(true);
+		legumePlantee.setFitHeight(100);
+		legumePlantee.setY(y - 50);
+		legumePlantee.setX(x - 15);
+		
+		AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
+		cloture.getChildren().add(legumePlantee);
 		
 	}
 }
