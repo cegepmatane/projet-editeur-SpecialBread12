@@ -42,15 +42,78 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button id="emplacement-1" fx:id="emplacement1" mnemonicParsing="false" prefHeight="150.0" prefWidth="65.0" />
-                        <Button id="emplacement-2" fx:id="emplacement2" mnemonicParsing="false" prefHeight="130.0" prefWidth="56.0" textOverrun="CLIP" GridPane.columnIndex="1" />
-                        <Button id="emplacement-3" fx:id="emplacement3" mnemonicParsing="false" prefHeight="118.0" prefWidth="62.0" textOverrun="CLIP" GridPane.columnIndex="2" />
-                        <Button id="emplacement-4" fx:id="emplacement4" mnemonicParsing="false" prefHeight="140.0" prefWidth="106.0" textOverrun="CLIP" GridPane.columnIndex="3" />
-                        <Button id="emplacement-5" fx:id="emplacement5" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="4" />
-                        <Button id="emplacement-6" fx:id="emplacement6" mnemonicParsing="false" prefHeight="82.0" prefWidth="180.0" GridPane.columnIndex="5" />
-                        <Button id="emplacement-7" fx:id="emplacement7" mnemonicParsing="false" prefHeight="82.0" prefWidth="134.0" GridPane.columnIndex="6" />
-                        <Button id="emplacement-8" fx:id="emplacement8" mnemonicParsing="false" prefHeight="82.0" prefWidth="153.0" GridPane.columnIndex="7" />
-                        <Button id="emplacement-9" fx:id="emplacement9" mnemonicParsing="false" prefHeight="184.0" prefWidth="62.0" GridPane.columnIndex="8" />
+                        <Button id="emplacement-1" fx:id="emplacement1" mnemonicParsing="false" prefHeight="150.0" prefWidth="65.0">
+                           <graphic>
+                              <ImageView fitHeight="86.0" fitWidth="56.0">
+                                 <image>
+                                    <Image url="@decoration/plantes/sunflower.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="emplacement-2" fx:id="emplacement2" mnemonicParsing="false" prefHeight="130.0" prefWidth="56.0" textOverrun="CLIP" GridPane.columnIndex="1">
+                           <graphic>
+                              <ImageView fitHeight="85.0" fitWidth="57.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@decoration/plantes/peashooter.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="emplacement-3" fx:id="emplacement3" mnemonicParsing="false" prefHeight="118.0" prefWidth="62.0" textOverrun="CLIP" GridPane.columnIndex="2">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@decoration/plantes/choushooter.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="emplacement-4" fx:id="emplacement4" mnemonicParsing="false" prefHeight="140.0" prefWidth="106.0" textOverrun="CLIP" GridPane.columnIndex="3">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@decoration/plantes/cornshooter.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="emplacement-5" fx:id="emplacement5" mnemonicParsing="false" prefHeight="119.0" prefWidth="108.0" textOverrun="CLIP" GridPane.columnIndex="4">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@decoration/plantes/fastshooter.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="emplacement-6" fx:id="emplacement6" mnemonicParsing="false" prefHeight="82.0" prefWidth="180.0" GridPane.columnIndex="5">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@decoration/plantes/firetrunk.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="emplacement-7" fx:id="emplacement7" mnemonicParsing="false" prefHeight="82.0" prefWidth="134.0" GridPane.columnIndex="6">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@decoration/plantes/nenuphar.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="emplacement-8" fx:id="emplacement8" mnemonicParsing="false" prefHeight="82.0" prefWidth="153.0" GridPane.columnIndex="7">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@decoration/plantes/plantpot.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button id="emplacement-9" fx:id="emplacement9" mnemonicParsing="false" prefHeight="184.0" prefWidth="62.0" GridPane.columnIndex="8">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@decoration/plantes/tallnut.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
                      </children>
                   </GridPane>
                </children>

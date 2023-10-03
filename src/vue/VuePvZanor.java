@@ -1,4 +1,6 @@
 package vue;
+import javax.swing.JButton;
+
 import com.sun.media.jfxmedia.logging.Logger;
 
 import architecture.Vue;
@@ -179,5 +181,6 @@ public class VuePvZanor extends Vue {
 		
 		
 
+		
 	}
 }
