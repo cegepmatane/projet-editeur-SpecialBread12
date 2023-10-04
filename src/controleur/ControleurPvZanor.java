@@ -6,7 +6,6 @@ import architecture.Controleur;
 import javafx.scene.image.ImageView;
 import modele.Terrain;
 import modele.Terrain.TERRAIN;
-import vue.VueJardinator;
 import vue.VuePvZanor;
 
 public class ControleurPvZanor extends Controleur{
