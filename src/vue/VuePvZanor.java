@@ -10,7 +10,10 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Rectangle;
+import modele.Plantes;
 import modele.Plantes.PLANTES;
 import modele.Terrain.TERRAIN;
 
@@ -101,7 +104,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement1");
-				
+				controleur.notifierChoixPlantes(Plantes.PLANTES.SUNFLOWER);
 			}});
 		Button emplacement2 = (Button)lookup("#emplacement-2");
 		emplacement2.setOnAction(new EventHandler<>() {
@@ -109,7 +112,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement2");
-				
+				controleur.notifierChoixPlantes(Plantes.PLANTES.PEASHOOTER);
 			}});
 		Button emplacement3 = (Button)lookup("#emplacement-3");
 		emplacement3.setOnAction(new EventHandler<>() {
@@ -117,7 +120,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement3");
-				
+				controleur.notifierChoixPlantes(Plantes.PLANTES.CHOUSHOOTER);
 			}});
 		Button emplacement4 = (Button)lookup("#emplacement-4");
 		emplacement4.setOnAction(new EventHandler<>() {
@@ -125,7 +128,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement4");
-				
+				controleur.notifierChoixPlantes(Plantes.PLANTES.CORNSHOOTER);
 			}});
 		Button emplacement5 = (Button)lookup("#emplacement-5");
 		emplacement5.setOnAction(new EventHandler<>() {
@@ -133,7 +136,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement5");
-				
+				controleur.notifierChoixPlantes(Plantes.PLANTES.FASTSHOOTER);
 			}});
 		
 		Button emplacement6 = (Button)lookup("#emplacement-6");
@@ -142,7 +145,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement6");
-				
+				controleur.notifierChoixPlantes(Plantes.PLANTES.FIRETRUNK);
 			}});
 		
 		Button emplacement7 = (Button)lookup("#emplacement-7");
@@ -151,6 +154,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement7");
+				controleur.notifierChoixPlantes(Plantes.PLANTES.NENUPHAR);
 				
 			}});
 		
@@ -160,7 +164,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement8");
-				
+				controleur.notifierChoixPlantes(Plantes.PLANTES.PLANTPOT);
 			}});
 		
 		Button emplacement9 = (Button)lookup("#emplacement-9");
@@ -169,7 +173,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement9");
-				
+				controleur.notifierChoixPlantes(Plantes.PLANTES.TALLNUT);
 			}});
 		
 		Button zombie1 = (Button)lookup("#zombie1");
@@ -227,7 +231,17 @@ public class VuePvZanor extends Vue {
 			}});
 		
 		
+		Rectangle jardinRectangle = (Rectangle)lookup("#jardin-rectangle");
+		jardinRectangle.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
+			@Override
+			public void handle(MouseEvent clic) {
+				double x = clic.getX();
+				double y = clic.getY();
+			System.out.println("Clic jardin");	
+			controleur.notifierClicJardin(x,y);
+			
+			}});
 		
 	}
 	public void planterPlantes(double x, double y, PLANTES planteChoisi) {
@@ -241,7 +255,7 @@ public class VuePvZanor extends Vue {
 		plantePlantee.setImage(new Image("vue/decoration/plantes/peashooter.jpg"));
 		}
 		if(planteChoisi == PLANTES.CHOUSHOOTER) {
-		plantePlantee.setImage(new Image("vue/decoration/plantes/choushotter.jpg"));
+		plantePlantee.setImage(new Image("vue/decoration/plantes/choushooter.jpg"));
 		}
 		if(planteChoisi == PLANTES.CORNSHOOTER) {
 		plantePlantee.setImage(new Image("vue/decoration/plantes/cornshooter.jpg"));
@@ -264,7 +278,7 @@ public class VuePvZanor extends Vue {
 		plantePlantee.setPreserveRatio(true);
 		plantePlantee.setFitHeight(100);
 		plantePlantee.setY(y - 50);
-		plantePlantee.setX(x - 15);
+		plantePlantee.setX(x -40);
 		
 		AnchorPane jardin = (AnchorPane)lookup("#jardin");
 		jardin.getChildren().add(plantePlantee);

@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane id="fenetre" prefHeight="743.0" prefWidth="1294.0" stylesheets="@decoration/jardinator.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane id="espace-travail" layoutY="-1.0" prefHeight="744.0" prefWidth="1294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
          <children>
-            <AnchorPane id="jardin" fx:id="jardin" layoutX="230.0" layoutY="99.0" prefHeight="616.0" prefWidth="694.0" />
-            <ImageView id="terrain" fx:id="terrain" fitHeight="743.0" fitWidth="1294.0" pickOnBounds="true">
+            <ImageView id="terrain" fx:id="terrain" fitHeight="743.0" fitWidth="1294.0" mouseTransparent="true" pickOnBounds="true">
                <image>
                   <Image url="@../ArriereFond-Entree-Jour.png" />
                </image>
@@ -25,7 +25,7 @@
                   <Image url="@../Menu-Plantes.png" />
                </image>
             </ImageView>
-            <Pane layoutX="6.0" layoutY="150.0" prefHeight="501.0" prefWidth="1207.0">
+            <Pane layoutY="149.0" prefHeight="501.0" prefWidth="1207.0">
                <children>
                   <GridPane id="semis-grille" layoutX="283.0" layoutY="-144.0" prefHeight="84.0" prefWidth="550.0">
                     <columnConstraints>
@@ -99,6 +99,11 @@
                         </ImageView>
                      </children>
                   </GridPane>
+                  <AnchorPane id="jardin" fx:id="jardin" layoutX="226.0" layoutY="-50.0" prefHeight="666.0" prefWidth="671.0">
+                     <children>
+                        <Rectangle id="jardin-rectangle" fx:id="jardinRectangle" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="616.0" stroke="BLACK" strokeType="INSIDE" width="694.0" />
+                     </children>
+                  </AnchorPane>
                </children>
             </Pane>
             <VBox layoutX="22.0" layoutY="4.0" prefHeight="200.0" prefWidth="100.0">
