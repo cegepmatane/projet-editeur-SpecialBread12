@@ -1,4 +1,6 @@
 package vue;
+import java.io.File;
+
 import javax.swing.JButton;
 
 import com.sun.media.jfxmedia.logging.Logger;
@@ -12,6 +14,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.shape.Rectangle;
 import modele.Plantes;
 import modele.Plantes.PLANTES;
@@ -30,6 +34,7 @@ public class VuePvZanor extends Vue {
 		super("PvZanor.fxml", VuePvZanor.class, 1294,743);
 		super.controleur = this.controleur = new ControleurPvZanor();
 		Logger.logMsg(Logger.INFO, "new VuePvZanor()");
+
 	}
 	private Boolean zombieBool;	
 	public void activerControles()
@@ -43,8 +48,11 @@ public class VuePvZanor extends Vue {
 			public void handle(ActionEvent arg0) {
 				System.out.println("entree jour");
 				ImageView imageTerrain = (ImageView)lookup("#terrain");
-				
 				imageTerrain.setImage(new Image("ArriereFond-Entree-Jour.png"));
+				String bip = "bin/vue/decoration/musique/day.mp3";
+				Media hit = new Media(new File(bip).toURI().toString());
+				MediaPlayer mediaPlayer = new MediaPlayer(hit);
+				mediaPlayer.play();
 			}});
 		
 		Button entreeNuit = (Button)lookup("#entree-nuit");
