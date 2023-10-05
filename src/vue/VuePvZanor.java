@@ -49,7 +49,7 @@ public class VuePvZanor extends Vue {
 				System.out.println("entree jour");
 				ImageView imageTerrain = (ImageView)lookup("#terrain");
 				imageTerrain.setImage(new Image("ArriereFond-Entree-Jour.png"));
-				controleur.musique("bin/vue/decoration/musique/day.mp3");
+				controleur.musique(1);
 			}});
 		
 		Button entreeNuit = (Button)lookup("#entree-nuit");
@@ -61,6 +61,7 @@ public class VuePvZanor extends Vue {
 				ImageView imageTerrain = (ImageView)lookup("#terrain");
 				
 				imageTerrain.setImage(new Image("ArriereFond-Entree-Nuit.png"));
+				controleur.musique(2);
 			}});
 		
 		Button piscineJour = (Button)lookup("#piscine-jour");
@@ -72,6 +73,7 @@ public class VuePvZanor extends Vue {
 				ImageView imageTerrain = (ImageView)lookup("#terrain");
 				
 				imageTerrain.setImage(new Image("ArriereFond-Piscine-Jour.png"));
+				controleur.musique(3);
 			}});
 		Button piscineNuit = (Button)lookup("#piscine-nuit");
 		piscineNuit.setOnAction(new EventHandler<>() {
@@ -82,6 +84,7 @@ public class VuePvZanor extends Vue {
 				ImageView imageTerrain = (ImageView)lookup("#terrain");
 				
 				imageTerrain.setImage(new Image("ArriereFond-Piscine-Nuit.png"));
+				controleur.musique(4);
 			}});
 		Button toitJour = (Button)lookup("#toit-jour");
 		toitJour.setOnAction(new EventHandler<>() {
@@ -92,6 +95,7 @@ public class VuePvZanor extends Vue {
 				ImageView imageTerrain = (ImageView)lookup("#terrain");
 				
 				imageTerrain.setImage(new Image("ArriereFond-Toit-Jour.png"));
+				controleur.musique(5);
 			}});
 		
 		Button toitNuit = (Button)lookup("#toit-nuit");
@@ -103,6 +107,7 @@ public class VuePvZanor extends Vue {
 				ImageView imageTerrain = (ImageView)lookup("#terrain");
 				
 				imageTerrain.setImage(new Image("ArriereFond-Toit-Nuit.png"));
+				controleur.musique(6);
 			}});
 		
 		Button emplacement1 = (Button)lookup("#emplacement-1");
