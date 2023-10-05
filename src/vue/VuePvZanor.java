@@ -16,7 +16,9 @@ import javafx.scene.shape.Rectangle;
 import modele.Plantes;
 import modele.Plantes.PLANTES;
 import modele.Terrain.TERRAIN;
-
+import modele.Zombie.ZOMBIE;
+import modele.Zombies.ZOMBIES;
+import modele.Zombies;
 public class VuePvZanor extends Vue {
 
 	protected ControleurPvZanor controleur;
@@ -182,7 +184,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("Clic sur zombie1");
-				
+				controleur.notifierChoixZombies(Zombies.ZOMBIES.NORMAL);
 			}});
 		
 		Button zombie2 = (Button)lookup("#zombie2");
@@ -284,4 +286,21 @@ public class VuePvZanor extends Vue {
 		jardin.getChildren().add(plantePlantee);
 		
 	}
+	
+	public void placerZombie(double x, double y, ZOMBIES zombiesChoisi) {
+		
+		ImageView zombiePlacer = new ImageView();
+		if(zombiesChoisi == ZOMBIES.NORMAL) {
+		zombiePlacer.setImage(new Image("vue/decoration/zombies/zombie_normal.png"));
+		}
+		
+		zombiePlacer.setPreserveRatio(true);
+		zombiePlacer.setFitHeight(100);
+		zombiePlacer.setY(y - 50);
+		zombiePlacer.setX(x -40);
+		
+		AnchorPane jardin = (AnchorPane)lookup("#jardin");
+		jardin.getChildren().add(zombiePlacer);
+	}
+	
 }
