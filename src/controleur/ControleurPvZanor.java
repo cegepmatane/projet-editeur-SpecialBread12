@@ -17,7 +17,7 @@ public class ControleurPvZanor extends Controleur{
 	
 	private Plantes.PLANTES plantesChoisi;
 	private Zombies.ZOMBIES zombiesChoisi;
-	public Boolean zombieBool = false;
+
 	public ControleurPvZanor()
 	{
 		Logger.logMsg(Logger.INFO, "new ControleurPvZanor()");
@@ -30,24 +30,23 @@ public class ControleurPvZanor extends Controleur{
 	
 	public void notifierChoixPlantes(PLANTES plante) {
 		
-		zombieBool = false;
+
 		this.plantesChoisi = plante;
 		
 	}
 	
 	public void notifierChoixZombies(ZOMBIES zombie) {
 		
-		zombieBool = true;
 		this.zombiesChoisi = zombie;
 		
 	}
 	
 	
-	public void notifierClicJardin(double x, double y) {
-		if(zombieBool = true) {
+	public void notifierClicJardin(double x, double y, Boolean zombieBool) {
+		if(zombieBool == true) {
 			VuePvZanor.getInstance().placerZombie(x, y, this.zombiesChoisi);
 		}
-		else {
+		if (zombieBool == false) {
 			VuePvZanor.getInstance().planterPlantes(x, y, this.plantesChoisi);
 		}
 	}

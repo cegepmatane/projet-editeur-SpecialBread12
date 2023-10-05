@@ -31,7 +31,7 @@ public class VuePvZanor extends Vue {
 		super.controleur = this.controleur = new ControleurPvZanor();
 		Logger.logMsg(Logger.INFO, "new VuePvZanor()");
 	}
-		
+	private Boolean zombieBool;	
 	public void activerControles()
 	{
 		super.activerControles();
@@ -106,6 +106,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement1");
+				zombieBool = false;
 				controleur.notifierChoixPlantes(Plantes.PLANTES.SUNFLOWER);
 			}});
 		Button emplacement2 = (Button)lookup("#emplacement-2");
@@ -114,6 +115,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement2");
+				zombieBool = false;
 				controleur.notifierChoixPlantes(Plantes.PLANTES.PEASHOOTER);
 			}});
 		Button emplacement3 = (Button)lookup("#emplacement-3");
@@ -122,6 +124,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement3");
+				zombieBool = false;
 				controleur.notifierChoixPlantes(Plantes.PLANTES.CHOUSHOOTER);
 			}});
 		Button emplacement4 = (Button)lookup("#emplacement-4");
@@ -130,6 +133,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement4");
+				zombieBool = false;
 				controleur.notifierChoixPlantes(Plantes.PLANTES.CORNSHOOTER);
 			}});
 		Button emplacement5 = (Button)lookup("#emplacement-5");
@@ -138,6 +142,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement5");
+				zombieBool = false;
 				controleur.notifierChoixPlantes(Plantes.PLANTES.FASTSHOOTER);
 			}});
 		
@@ -147,6 +152,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement6");
+				zombieBool = false;
 				controleur.notifierChoixPlantes(Plantes.PLANTES.FIRETRUNK);
 			}});
 		
@@ -156,6 +162,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement7");
+				zombieBool = false;
 				controleur.notifierChoixPlantes(Plantes.PLANTES.NENUPHAR);
 				
 			}});
@@ -166,6 +173,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement8");
+				zombieBool = false;
 				controleur.notifierChoixPlantes(Plantes.PLANTES.PLANTPOT);
 			}});
 		
@@ -175,6 +183,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("emplacement9");
+				zombieBool = false;
 				controleur.notifierChoixPlantes(Plantes.PLANTES.TALLNUT);
 			}});
 		
@@ -184,6 +193,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("Clic sur zombie1");
+				zombieBool = true;
 				controleur.notifierChoixZombies(Zombies.ZOMBIES.NORMAL);
 			}});
 		
@@ -241,7 +251,7 @@ public class VuePvZanor extends Vue {
 				double x = clic.getX();
 				double y = clic.getY();
 			System.out.println("Clic jardin");	
-			controleur.notifierClicJardin(x,y);
+			controleur.notifierClicJardin(x,y,zombieBool);
 			
 			}});
 		
