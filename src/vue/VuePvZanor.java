@@ -49,10 +49,7 @@ public class VuePvZanor extends Vue {
 				System.out.println("entree jour");
 				ImageView imageTerrain = (ImageView)lookup("#terrain");
 				imageTerrain.setImage(new Image("ArriereFond-Entree-Jour.png"));
-				String bip = "bin/vue/decoration/musique/day.mp3";
-				Media hit = new Media(new File(bip).toURI().toString());
-				MediaPlayer mediaPlayer = new MediaPlayer(hit);
-				mediaPlayer.play();
+				controleur.musique("bin/vue/decoration/musique/day.mp3");
 			}});
 		
 		Button entreeNuit = (Button)lookup("#entree-nuit");

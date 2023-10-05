@@ -1,9 +1,13 @@
 package controleur;
 
+import java.io.File;
+
 import com.sun.media.jfxmedia.logging.Logger;
 
 import architecture.Controleur;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import modele.Terrain;
 import modele.Plantes;
 import modele.Plantes.PLANTES;
@@ -49,6 +53,13 @@ public class ControleurPvZanor extends Controleur{
 		if (zombieBool == false) {
 			VuePvZanor.getInstance().planterPlantes(x, y, this.plantesChoisi);
 		}
+	}
+	
+	public void musique(String url) {
+		String bip = "bin/vue/decoration/musique/day.mp3";
+		Media hit = new Media(new File(bip).toURI().toString());
+		MediaPlayer mediaPlayer = new MediaPlayer(hit);
+		mediaPlayer.play();
 	}
 
 }
