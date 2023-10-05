@@ -67,8 +67,10 @@ public class ControleurPvZanor extends Controleur{
 		
 		switch (selection) {
 		
-		case 1: 		
+		case 1: 	
+			
 		bip = "bin/vue/decoration/musique/day.mp3";
+	       
 		break;
 		
 		case 2: 
