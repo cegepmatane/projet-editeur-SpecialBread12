@@ -31,6 +31,13 @@ public class ControleurPvZanor extends Controleur{
 		
 	}
 	
+	public void notifierChoixZombies(PLANTES plante) {
+		
+		
+		this.plantesChoisi = plante;
+		
+	}
+	
 	
 	public void notifierClicJardin(double x, double y) {
 		VuePvZanor.getInstance().planterPlantes(x, y, this.plantesChoisi);
