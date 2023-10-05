@@ -238,15 +238,36 @@ public class VuePvZanor extends Vue {
 		plantePlantee.setImage(new Image("vue/decoration/plantes/sunflower.jpg"));
 		}
 		if(planteChoisi == PLANTES.PEASHOOTER) {
-		plantePlantee.setImage(new Image("vue/decoration/semis/chou.png"));
+		plantePlantee.setImage(new Image("vue/decoration/plantes/peashooter.jpg"));
+		}
+		if(planteChoisi == PLANTES.CHOUSHOOTER) {
+		plantePlantee.setImage(new Image("vue/decoration/plantes/choushotter.jpg"));
+		}
+		if(planteChoisi == PLANTES.CORNSHOOTER) {
+		plantePlantee.setImage(new Image("vue/decoration/plantes/cornshooter.jpg"));
+		}
+		if(planteChoisi == PLANTES.FASTSHOOTER) {
+		plantePlantee.setImage(new Image("vue/decoration/plantes/fastshooter.jpg"));
+		}
+		if(planteChoisi == PLANTES.FIRETRUNK) {
+		plantePlantee.setImage(new Image("vue/decoration/plantes/firetrunk.jpg"));
+		}
+		if(planteChoisi == PLANTES.NENUPHAR) {
+		plantePlantee.setImage(new Image("vue/decoration/plantes/nenuphar.jpg"));
+		}
+		if(planteChoisi == PLANTES.PLANTPOT) {
+		plantePlantee.setImage(new Image("vue/decoration/plantes/plantpot.jpg"));
+		}
+		if(planteChoisi == PLANTES.TALLNUT) {
+		plantePlantee.setImage(new Image("vue/decoration/plantes/tallnut.jpg"));
 		}
 		plantePlantee.setPreserveRatio(true);
 		plantePlantee.setFitHeight(100);
 		plantePlantee.setY(y - 50);
 		plantePlantee.setX(x - 15);
 		
-		AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
-		cloture.getChildren().add(plantePlantee);
+		AnchorPane jardin = (AnchorPane)lookup("#jardin");
+		jardin.getChildren().add(plantePlantee);
 		
 	}
 }

@@ -14,6 +14,7 @@
    <children>
       <AnchorPane id="espace-travail" layoutY="-1.0" prefHeight="744.0" prefWidth="1294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
          <children>
+            <AnchorPane id="jardin" fx:id="jardin" layoutX="230.0" layoutY="99.0" prefHeight="616.0" prefWidth="694.0" />
             <ImageView id="terrain" fx:id="terrain" fitHeight="743.0" fitWidth="1294.0" pickOnBounds="true">
                <image>
                   <Image url="@../ArriereFond-Entree-Jour.png" />
@@ -51,42 +52,42 @@
                         <Button id="emplacement-7" fx:id="emplacement7" mnemonicParsing="false" prefHeight="82.0" prefWidth="134.0" GridPane.columnIndex="6" />
                         <Button id="emplacement-8" fx:id="emplacement8" mnemonicParsing="false" prefHeight="82.0" prefWidth="153.0" GridPane.columnIndex="7" />
                         <Button id="emplacement-9" fx:id="emplacement9" mnemonicParsing="false" prefHeight="184.0" prefWidth="62.0" GridPane.columnIndex="8" />
-                        <ImageView fitHeight="87.0" fitWidth="56.0" x="50.0" GridPane.columnIndex="1">
+                        <ImageView fitHeight="87.0" fitWidth="56.0" mouseTransparent="true" x="50.0" GridPane.columnIndex="1">
                            <image>
                               <Image url="@decoration/plantes/peashooter.jpg" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="86.0" fitWidth="63.0">
+                        <ImageView fitHeight="86.0" fitWidth="63.0" mouseTransparent="true">
                            <image>
                               <Image url="@decoration/plantes/sunflower.jpg" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="84.0" fitWidth="60.0" GridPane.columnIndex="2">
+                        <ImageView fitHeight="84.0" fitWidth="60.0" mouseTransparent="true" GridPane.columnIndex="2">
                            <image>
                               <Image url="@decoration/plantes/choushooter.jpg" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="86.0" fitWidth="65.0" GridPane.columnIndex="3">
+                        <ImageView fitHeight="86.0" fitWidth="65.0" mouseTransparent="true" GridPane.columnIndex="3">
                            <image>
                               <Image url="@decoration/plantes/cornshooter.jpg" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="87.0" fitWidth="64.0" GridPane.columnIndex="4">
+                        <ImageView fitHeight="87.0" fitWidth="64.0" mouseTransparent="true" GridPane.columnIndex="4">
                            <image>
                               <Image url="@decoration/plantes/fastshooter.jpg" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="85.0" fitWidth="63.0" GridPane.columnIndex="5">
+                        <ImageView fitHeight="85.0" fitWidth="63.0" mouseTransparent="true" GridPane.columnIndex="5">
                            <image>
                               <Image url="@decoration/plantes/firetrunk.jpg" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="87.0" fitWidth="60.0" GridPane.columnIndex="6">
+                        <ImageView fitHeight="87.0" fitWidth="60.0" mouseTransparent="true" GridPane.columnIndex="6">
                            <image>
                               <Image url="@decoration/plantes/nenuphar.jpg" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="87.0" fitWidth="60.0" GridPane.columnIndex="7">
+                        <ImageView fitHeight="87.0" fitWidth="60.0" mouseTransparent="true" GridPane.columnIndex="7">
                            <image>
                               <Image url="@decoration/plantes/plantpot.jpg" />
                            </image>
