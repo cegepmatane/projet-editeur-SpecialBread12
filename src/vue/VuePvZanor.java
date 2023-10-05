@@ -230,23 +230,23 @@ public class VuePvZanor extends Vue {
 
 		
 	}
-	public void planterSemis(double x, double y, PLANTES legumeChoisi) {
-		//Ajouter la carotte dans le java
+	public void planterPlantes(double x, double y, PLANTES planteChoisi) {
+		//Ajouter les plantes dans le java
 		
-		ImageView legumePlantee = new ImageView();
-		if(legumeChoisi == PLANTES.SUNFLOWER) {
-		legumePlantee.setImage(new Image("vue/decoration/semis/carotte.png"));
+		ImageView plantePlantee = new ImageView();
+		if(planteChoisi == PLANTES.SUNFLOWER) {
+		plantePlantee.setImage(new Image("vue/decoration/plantes/sunflower.jpg"));
 		}
-		if(legumeChoisi == PLANTES.PEESHOOTER) {
-		legumePlantee.setImage(new Image("vue/decoration/semis/chou.png"));
+		if(planteChoisi == PLANTES.PEASHOOTER) {
+		plantePlantee.setImage(new Image("vue/decoration/semis/chou.png"));
 		}
-		legumePlantee.setPreserveRatio(true);
-		legumePlantee.setFitHeight(100);
-		legumePlantee.setY(y - 50);
-		legumePlantee.setX(x - 15);
+		plantePlantee.setPreserveRatio(true);
+		plantePlantee.setFitHeight(100);
+		plantePlantee.setY(y - 50);
+		plantePlantee.setX(x - 15);
 		
 		AnchorPane cloture = (AnchorPane)lookup("#jardin-cloture");
-		cloture.getChildren().add(legumePlantee);
+		cloture.getChildren().add(plantePlantee);
 		
 	}
 }

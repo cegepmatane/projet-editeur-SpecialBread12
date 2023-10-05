@@ -13,7 +13,7 @@ import vue.VuePvZanor;
 public class ControleurPvZanor extends Controleur{
 
 	
-	private Plantes.PLANTES PlantesChoisi;
+	private Plantes.PLANTES plantesChoisi;
 	public ControleurPvZanor()
 	{
 		Logger.logMsg(Logger.INFO, "new ControleurPvZanor()");
@@ -27,13 +27,13 @@ public class ControleurPvZanor extends Controleur{
 	public void notifierChoixPlantes(PLANTES plante) {
 		
 		
-		this.PlantesChoisi = plante;
+		this.plantesChoisi = plante;
 		
 	}
 	
 	
 	public void notifierClicPlantes(double x, double y) {
-		VuePvZanor.getInstance().planterSemis(x, y, this.PlantesChoisi);
+		VuePvZanor.getInstance().planterPlantes(x, y, this.plantesChoisi);
 	}
 
 }
