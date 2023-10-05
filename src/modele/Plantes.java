@@ -1,7 +1,7 @@
 package modele;
 
 public class Plantes {
-	public enum PLANTES {}
+	public enum PLANTES {SUNFLOWER, PEESHOOTER}
 	protected PLANTES Plantes;
 		public Plantes() {
 			

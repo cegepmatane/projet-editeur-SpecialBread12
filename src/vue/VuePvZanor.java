@@ -234,10 +234,10 @@ public class VuePvZanor extends Vue {
 		//Ajouter la carotte dans le java
 		
 		ImageView legumePlantee = new ImageView();
-		if(legumeChoisi == PLANTES.CAROTTE) {
+		if(legumeChoisi == PLANTES.SUNFLOWER) {
 		legumePlantee.setImage(new Image("vue/decoration/semis/carotte.png"));
 		}
-		if(legumeChoisi == PLANTES.CHOU) {
+		if(legumeChoisi == PLANTES.PEESHOOTER) {
 		legumePlantee.setImage(new Image("vue/decoration/semis/chou.png"));
 		}
 		legumePlantee.setPreserveRatio(true);
