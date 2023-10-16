@@ -213,6 +213,8 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("Clic sur zombie2");
+				zombieBool = true;
+				controleur.notifierChoixZombies(Zombies.ZOMBIES.CONE);
 				
 			}});
 		
@@ -312,6 +314,9 @@ public class VuePvZanor extends Vue {
 		ImageView zombiePlacer = new ImageView();
 		if(zombiesChoisi == ZOMBIES.NORMAL) {
 		zombiePlacer.setImage(new Image("vue/decoration/zombies/zombie_normal.png"));
+		}
+		if(zombiesChoisi == ZOMBIES.CONE) {
+			zombiePlacer.setImage(new Image("vue/decoration/zombies/zombie_cone.png"));
 		}
 		
 		zombiePlacer.setPreserveRatio(true);
