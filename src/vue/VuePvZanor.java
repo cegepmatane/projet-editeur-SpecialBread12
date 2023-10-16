@@ -224,7 +224,8 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("Clic sur zombie3");
-				
+				zombieBool = true;
+				controleur.notifierChoixZombies(Zombies.ZOMBIES.SEAU);
 			}});
 		
 		Button zombie4 = (Button)lookup("#zombie4");
@@ -233,7 +234,8 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("Clic sur zombie4");
-				
+				zombieBool = true;
+				controleur.notifierChoixZombies(Zombies.ZOMBIES.FOOTBALL);
 			}});
 		
 		Button zombie5 = (Button)lookup("#zombie5");
@@ -242,7 +244,8 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("Clic sur zombie5");
-				
+				zombieBool = true;
+				controleur.notifierChoixZombies(Zombies.ZOMBIES.VAGUE);
 			}});
 		
 		Button zombie6 = (Button)lookup("#zombie6");
@@ -251,7 +254,8 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("Clic sur zombie6");
-				
+				zombieBool = true;
+				controleur.notifierChoixZombies(Zombies.ZOMBIES.JOURNAL);
 			}});
 		
 		
@@ -317,6 +321,18 @@ public class VuePvZanor extends Vue {
 		}
 		if(zombiesChoisi == ZOMBIES.CONE) {
 			zombiePlacer.setImage(new Image("vue/decoration/zombies/zombie_cone.png"));
+		}
+		if(zombiesChoisi == ZOMBIES.SEAU) {
+			zombiePlacer.setImage(new Image("vue/decoration/zombies/zombie_seau.png"));
+		}
+		if(zombiesChoisi == ZOMBIES.FOOTBALL) {
+			zombiePlacer.setImage(new Image("vue/decoration/zombies/zombie_football.png"));
+		}
+		if(zombiesChoisi == ZOMBIES.VAGUE) {
+			zombiePlacer.setImage(new Image("vue/decoration/zombies/zombie_drapeau.png"));
+		}
+		if(zombiesChoisi == ZOMBIES.JOURNAL) {
+			zombiePlacer.setImage(new Image("vue/decoration/zombies/zombie_journal.png"));
 		}
 		
 		zombiePlacer.setPreserveRatio(true);
