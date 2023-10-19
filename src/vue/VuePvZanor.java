@@ -8,6 +8,7 @@ import com.sun.media.jfxmedia.logging.Logger;
 import architecture.Vue;
 import controleur.ControleurPvZanor;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -271,6 +272,16 @@ public class VuePvZanor extends Vue {
 			
 			}});
 		
+			Button actionSauvegarder = (Button)lookup("#export-button");
+			actionSauvegarder.setOnAction(new EventHandler() {
+
+				@Override
+				public void handle(Event e) {
+					System.out.println("Action de sauvegarder");				
+					controleur.notifierSauvegarder();
+					
+				}});
+		
 	}
 	public void planterPlantes(double x, double y, PLANTES planteChoisi) {
 		//Ajouter les plantes dans le java
@@ -313,7 +324,7 @@ public class VuePvZanor extends Vue {
 		
 	}
 	
-	public void placerZombie(double x, double y, ZOMBIES zombiesChoisi) {
+	public void placerZombies(double x, double y, ZOMBIES zombiesChoisi) {
 		
 		ImageView zombiePlacer = new ImageView();
 		if(zombiesChoisi == ZOMBIES.NORMAL) {
@@ -343,5 +354,7 @@ public class VuePvZanor extends Vue {
 		AnchorPane jardin = (AnchorPane)lookup("#jardin");
 		jardin.getChildren().add(zombiePlacer);
 	}
+	
+
 	
 }

@@ -6,10 +6,12 @@ import java.io.IOException;
 import com.sun.media.jfxmedia.logging.Logger;
 
 import architecture.Controleur;
+import donnee.Exporteur;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import modele.Terrain;
+import modele.Jardin;
 import modele.Plantes;
 import modele.Plantes.PLANTES;
 import modele.Terrain.TERRAIN;
@@ -27,7 +29,7 @@ public class ControleurPvZanor extends Controleur{
 	
 	private Plantes.PLANTES plantesChoisi;
 	private Zombies.ZOMBIES zombiesChoisi;
-
+	private Jardin jardin = new Jardin();
 	public ControleurPvZanor()
 	{
 		Logger.logMsg(Logger.INFO, "new ControleurPvZanor()");
@@ -54,7 +56,7 @@ public class ControleurPvZanor extends Controleur{
 	
 	public void notifierClicJardin(double x, double y, Boolean zombieBool) {
 		if(zombieBool == true) {
-			VuePvZanor.getInstance().placerZombie(x, y, this.zombiesChoisi);
+			VuePvZanor.getInstance().placerZombies(x, y, this.zombiesChoisi);
 		}
 		if (zombieBool == false) {
 			VuePvZanor.getInstance().planterPlantes(x, y, this.plantesChoisi);
@@ -108,6 +110,11 @@ public class ControleurPvZanor extends Controleur{
 		
 	}
 	
-
+	public void notifierSauvegarder() {
+		System.out.println("ControleurPvZanor.notifierSauvegarder()");		
+		Exporteur exporteur = new Exporteur();
+		//exporteur.sauvegarder(legumesDuJardin);
+		exporteur.sauvegarder(jardin);
+	}
 
 }
