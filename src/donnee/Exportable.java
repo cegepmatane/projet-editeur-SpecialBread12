@@ -1,5 +1,9 @@
 package donnee;
 
-public class Exportable {
+public interface Exportable {
 
+	public String exporterXML();
+	public String exporterJSON();
+	//public String exporterCSV();
+	
 }
