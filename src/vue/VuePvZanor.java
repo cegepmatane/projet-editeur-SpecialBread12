@@ -37,6 +37,13 @@ public class VuePvZanor extends Vue {
 		Logger.logMsg(Logger.INFO, "new VuePvZanor()");
 
 	}
+	
+	public void afficherTerrain (TERRAIN terrain) {
+		ImageView imageTerrain = (ImageView)lookup("#terrain");
+		
+		imageTerrain.setImage(new Image("ArriereFond-Entree-Nuit.png"));
+	}
+
 	private Boolean zombieBool;	
 	public void activerControles()
 	{
@@ -50,6 +57,7 @@ public class VuePvZanor extends Vue {
 				System.out.println("entree jour");
 				ImageView imageTerrain = (ImageView)lookup("#terrain");
 				imageTerrain.setImage(new Image("ArriereFond-Entree-Jour.png"));
+				
 				controleur.musique(1);
 			}});
 		
@@ -59,9 +67,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("entree nuit");
-				ImageView imageTerrain = (ImageView)lookup("#terrain");
-				
-				imageTerrain.setImage(new Image("ArriereFond-Entree-Nuit.png"));
+				afficherTerrain(null);
 				controleur.musique(2);
 			}});
 		
@@ -273,10 +279,10 @@ public class VuePvZanor extends Vue {
 			}});
 		
 			Button actionSauvegarder = (Button)lookup("#export-button");
-			actionSauvegarder.setOnAction(new EventHandler() {
+			actionSauvegarder.setOnAction(new EventHandler<>() {
 
 				@Override
-				public void handle(Event e) {
+				public void handle(ActionEvent arg0) {
 					System.out.println("Action de sauvegarder");				
 					controleur.notifierSauvegarder();
 					

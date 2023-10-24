@@ -7,8 +7,8 @@ import donnee.Exportable;
 
 public class Jardin implements Exportable {
 
-	public enum TERRAIN {BACS, ENCLOS, TERRE, RANGS, AUCUN};
-	protected TERRAIN terrain = TERRAIN.AUCUN;
+	public enum TERRAIN {ENTREE_JOUR, ENTREE_NUIT, PISCINE_JOUR, PISCINE_NUIT, TOIT_JOUR, TOIT_NUIT};
+	protected TERRAIN terrain = TERRAIN.ENTREE_JOUR;
 
 	protected List<Plantes> plantesDuJardin;
 	
