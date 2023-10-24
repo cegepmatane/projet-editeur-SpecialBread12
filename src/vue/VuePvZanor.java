@@ -21,7 +21,6 @@ import javafx.scene.shape.Rectangle;
 import modele.Jardin.TERRAIN;
 import modele.Plantes;
 import modele.Plantes.PLANTES;
-import modele.Zombie.ZOMBIE;
 import modele.Zombies.ZOMBIES;
 import modele.Zombies;
 public class VuePvZanor extends Vue {
@@ -285,7 +284,7 @@ public class VuePvZanor extends Vue {
 
 				@Override
 				public void handle(ActionEvent arg0) {
-					System.out.println("Action de sauvegarder");				
+					System.out.println("Action de sauvegarder");	
 					controleur.notifierSauvegarder();
 					
 				}});

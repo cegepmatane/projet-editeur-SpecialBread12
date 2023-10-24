@@ -15,6 +15,12 @@ public class Plantes implements Exportable {
 			
 		}
 		
+		public Plantes(PLANTES Plantes, double x, double y) {
+			this.Plantes = Plantes;
+			this.x = x;
+			this.y = y;
+		}
+		
 		@Override
 		public String exporterXML() {
 			String xml = "";

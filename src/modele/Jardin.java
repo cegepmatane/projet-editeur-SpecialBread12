@@ -4,13 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import donnee.Exportable;
+import modele.Plantes.PLANTES;
 
 public class Jardin implements Exportable {
 
 	public enum TERRAIN {ENTREE_JOUR, ENTREE_NUIT, PISCINE_JOUR, PISCINE_NUIT, TOIT_JOUR, TOIT_NUIT};
+
 	protected TERRAIN terrain = TERRAIN.ENTREE_JOUR;
 
 	protected List<Plantes> plantesDuJardin;
+	protected List<Zombies> zombiesDuJardin;
 	
 	public Jardin() {
 		this.plantesDuJardin = new ArrayList<Plantes>();

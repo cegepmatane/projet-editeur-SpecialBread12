@@ -62,6 +62,8 @@ public class ControleurPvZanor extends Controleur{
 		}
 		if (zombieBool == false) {
 			VuePvZanor.getInstance().planterPlantes(x, y, this.plantesChoisi);
+			Plantes plantes = new Plantes(this.plantesChoisi, x, y);
+			jardin.ajouterPlante(plantes);
 		}
 	}
 	
@@ -115,12 +117,15 @@ public class ControleurPvZanor extends Controleur{
 	public void notifierSauvegarder() {
 		System.out.println("ControleurPvZanor.notifierSauvegarder()");		
 		Exporteur exporteur = new Exporteur();
+		System.out.println(jardin);
 		//exporteur.sauvegarder(legumesDuJardin);
 		exporteur.sauvegarder(jardin);
 	}
 
 	public void notifierClicTerrain(TERRAIN terrain) {
 		VuePvZanor.getInstance().afficherTerrain(terrain);
+		jardin.setTerrain(terrain);
+		
 		if (terrain == TERRAIN.ENTREE_JOUR)
 			this.musique(1);
 		if (terrain == TERRAIN.ENTREE_NUIT)
