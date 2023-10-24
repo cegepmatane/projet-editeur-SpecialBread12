@@ -14,7 +14,6 @@ import modele.Terrain;
 import modele.Jardin;
 import modele.Plantes;
 import modele.Plantes.PLANTES;
-import modele.Terrain.TERRAIN;
 import modele.Zombies;
 import modele.Zombies.ZOMBIES;
 import vue.VuePvZanor;
@@ -39,6 +38,8 @@ public class ControleurPvZanor extends Controleur{
 	{
 		
 	}
+	
+	
 	
 	public void notifierChoixPlantes(PLANTES plante) {
 		
@@ -115,6 +116,22 @@ public class ControleurPvZanor extends Controleur{
 		Exporteur exporteur = new Exporteur();
 		//exporteur.sauvegarder(legumesDuJardin);
 		exporteur.sauvegarder(jardin);
+	}
+
+	public void notifierClicTerrain(TERRAIN terrain) {
+		VuePvZanor.getInstance().afficherTerrain(terrain);
+		if (terrain == TERRAIN.ENTREE_JOUR)
+			this.musique(1);
+		if (terrain == TERRAIN.ENTREE_NUIT)
+			this.musique(2);
+		if (terrain == TERRAIN.PISCINE_JOUR)
+			this.musique(3);
+		if (terrain == TERRAIN.PISCINE_NUIT)
+			this.musique(4);
+		if (terrain == TERRAIN.TOIT_JOUR)
+			this.musique(5);
+		if (terrain == TERRAIN.TOIT_NUIT)
+			this.musique(6);
 	}
 
 }

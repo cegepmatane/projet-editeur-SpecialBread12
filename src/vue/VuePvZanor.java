@@ -18,9 +18,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.shape.Rectangle;
+import modele.Jardin.TERRAIN;
 import modele.Plantes;
 import modele.Plantes.PLANTES;
-import modele.Terrain.TERRAIN;
 import modele.Zombie.ZOMBIE;
 import modele.Zombies.ZOMBIES;
 import modele.Zombies;
@@ -46,6 +46,14 @@ public class VuePvZanor extends Vue {
 		
 		if (terrain == TERRAIN.ENTREE_NUIT)
 			imageTerrain.setImage(new Image("ArriereFond-Entree-Nuit.png"));
+		if (terrain == TERRAIN.PISCINE_JOUR)
+			imageTerrain.setImage(new Image("ArriereFond-Piscine-Jour.png"));
+		if (terrain == TERRAIN.PISCINE_NUIT)
+			imageTerrain.setImage(new Image("ArriereFond-Piscine-Nuit.png"));
+		if (terrain == TERRAIN.TOIT_JOUR)
+			imageTerrain.setImage(new Image("ArriereFond-Toit-Jour.png"));
+		if (terrain == TERRAIN.TOIT_NUIT)
+			imageTerrain.setImage(new Image("ArriereFond-Toit-Nuit.png"));
 	}
 
 	private Boolean zombieBool;	
@@ -60,8 +68,7 @@ public class VuePvZanor extends Vue {
 			public void handle(ActionEvent arg0) {
 				System.out.println("entree jour");
 				
-				afficherTerrain(TERRAIN.ENTREE_JOUR);
-				controleur.musique(1);
+				controleur.notifierClicTerrain(TERRAIN.ENTREE_JOUR);
 			}});
 		
 		Button entreeNuit = (Button)lookup("#entree-nuit");
@@ -70,8 +77,8 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("entree nuit");
-				afficherTerrain(TERRAIN.ENTREE_NUIT);
-				controleur.musique(2);
+				controleur.notifierClicTerrain(TERRAIN.ENTREE_NUIT);
+				
 			}});
 		
 		Button piscineJour = (Button)lookup("#piscine-jour");
@@ -80,10 +87,8 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("piscine jour");
-				ImageView imageTerrain = (ImageView)lookup("#terrain");
+				controleur.notifierClicTerrain(TERRAIN.PISCINE_JOUR);
 				
-				imageTerrain.setImage(new Image("ArriereFond-Piscine-Jour.png"));
-				controleur.musique(3);
 			}});
 		Button piscineNuit = (Button)lookup("#piscine-nuit");
 		piscineNuit.setOnAction(new EventHandler<>() {
@@ -91,10 +96,8 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("piscine nuit");
-				ImageView imageTerrain = (ImageView)lookup("#terrain");
 				
-				imageTerrain.setImage(new Image("ArriereFond-Piscine-Nuit.png"));
-				controleur.musique(4);
+				controleur.notifierClicTerrain(TERRAIN.PISCINE_NUIT);
 			}});
 		Button toitJour = (Button)lookup("#toit-jour");
 		toitJour.setOnAction(new EventHandler<>() {
@@ -102,10 +105,9 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("toit jour");
-				ImageView imageTerrain = (ImageView)lookup("#terrain");
+				controleur.notifierClicTerrain(TERRAIN.TOIT_JOUR);
 				
-				imageTerrain.setImage(new Image("ArriereFond-Toit-Jour.png"));
-				controleur.musique(5);
+				
 			}});
 		
 		Button toitNuit = (Button)lookup("#toit-nuit");
@@ -114,10 +116,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("toit nuit");
-				ImageView imageTerrain = (ImageView)lookup("#terrain");
-				
-				imageTerrain.setImage(new Image("ArriereFond-Toit-Nuit.png"));
-				controleur.musique(6);
+				controleur.notifierClicTerrain(TERRAIN.TOIT_NUIT);
 			}});
 		
 		Button emplacement1 = (Button)lookup("#emplacement-1");
