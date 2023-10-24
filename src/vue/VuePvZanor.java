@@ -41,7 +41,11 @@ public class VuePvZanor extends Vue {
 	public void afficherTerrain (TERRAIN terrain) {
 		ImageView imageTerrain = (ImageView)lookup("#terrain");
 		
-		imageTerrain.setImage(new Image("ArriereFond-Entree-Nuit.png"));
+		if (terrain == TERRAIN.ENTREE_JOUR)
+			imageTerrain.setImage(new Image("ArriereFond-Entree-Jour.png"));
+		
+		if (terrain == TERRAIN.ENTREE_NUIT)
+			imageTerrain.setImage(new Image("ArriereFond-Entree-Nuit.png"));
 	}
 
 	private Boolean zombieBool;	
@@ -55,9 +59,8 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("entree jour");
-				ImageView imageTerrain = (ImageView)lookup("#terrain");
-				imageTerrain.setImage(new Image("ArriereFond-Entree-Jour.png"));
 				
+				afficherTerrain(TERRAIN.ENTREE_JOUR);
 				controleur.musique(1);
 			}});
 		
@@ -67,7 +70,7 @@ public class VuePvZanor extends Vue {
 			@Override
 			public void handle(ActionEvent arg0) {
 				System.out.println("entree nuit");
-				afficherTerrain(null);
+				afficherTerrain(TERRAIN.ENTREE_NUIT);
 				controleur.musique(2);
 			}});
 		
