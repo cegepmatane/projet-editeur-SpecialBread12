@@ -59,6 +59,8 @@ public class ControleurPvZanor extends Controleur{
 	public void notifierClicJardin(double x, double y, Boolean zombieBool) {
 		if(zombieBool == true) {
 			VuePvZanor.getInstance().placerZombies(x, y, this.zombiesChoisi);
+			Zombies zombies = new Zombies(this.zombiesChoisi, x, y);
+			jardin.ajouterZombie(zombies);
 		}
 		if (zombieBool == false) {
 			VuePvZanor.getInstance().planterPlantes(x, y, this.plantesChoisi);

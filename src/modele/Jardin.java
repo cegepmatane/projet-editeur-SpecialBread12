@@ -17,6 +17,7 @@ public class Jardin implements Exportable {
 	
 	public Jardin() {
 		this.plantesDuJardin = new ArrayList<Plantes>();
+		this.zombiesDuJardin = new ArrayList<Zombies>();
 	}
 	public TERRAIN getTerrain() {
 		return terrain;
@@ -38,7 +39,10 @@ public class Jardin implements Exportable {
 	{
 		this.plantesDuJardin.add(plante);
 	}
-
+	
+	public void ajouterZombie(Zombies zombie) {
+		this.zombiesDuJardin.add(zombie);
+	}
 
 	@Override
 	public String exporterXML() {
@@ -51,6 +55,14 @@ public class Jardin implements Exportable {
 			xml+=plante.exporterXML();
 		}
 		xml += "</plantes>";
+		xml += "<zombies>";
+		for(Zombies zombie:this.zombiesDuJardin)
+		{
+			xml+=zombie.exporterXML();
+		}
+		xml += "</zombies>";
+		
+		
 		return "<jardin>" + xml + "</jardin>";
 	}
 
