@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -28,7 +29,7 @@ public class VuePvZanor extends Vue {
 	protected ControleurPvZanor controleur;
 	protected static VuePvZanor instance = null; 
 	public static VuePvZanor getInstance() {if(null==instance)instance = new VuePvZanor();return VuePvZanor.instance;}; 
-	
+	public enum COULEUR {NOIR, BLANC, BLEU};
 	private VuePvZanor() 
 	{
 		super("PvZanor.fxml", VuePvZanor.class, 1294,743);
@@ -288,6 +289,33 @@ public class VuePvZanor extends Vue {
 					controleur.notifierSauvegarder();
 					
 				}});
+			Button actionCouleur1 = (Button)lookup("#blanc");
+			actionCouleur1.setOnAction(new EventHandler<>() {
+
+				@Override
+				public void handle(ActionEvent arg0) {
+					System.out.println("Action de changer la couleur");	
+					controleur.notifierChangerCouleur(COULEUR.BLANC);
+					
+				}});
+			Button actionCouleur2 = (Button)lookup("#noir");
+			actionCouleur2.setOnAction(new EventHandler<>() {
+
+				@Override
+				public void handle(ActionEvent arg0) {
+					System.out.println("Action de changer la couleur");	
+					controleur.notifierChangerCouleur(COULEUR.NOIR);
+					
+				}});
+			Button actionCouleur3 = (Button)lookup("#bleu");
+			actionCouleur3.setOnAction(new EventHandler<>() {
+
+				@Override
+				public void handle(ActionEvent arg0) {
+					System.out.println("Action de changer la couleur");	
+					controleur.notifierChangerCouleur(COULEUR.BLEU);
+					
+				}});
 		
 	}
 	public void planterPlantes(double x, double y, PLANTES planteChoisi) {
@@ -361,7 +389,30 @@ public class VuePvZanor extends Vue {
 		AnchorPane jardin = (AnchorPane)lookup("#jardin");
 		jardin.getChildren().add(zombiePlacer);
 	}
-	
+	public void changerCouleurText(int choix) {
+		Label text = (Label)lookup("#text-level");
+		switch(choix) {
+		case 1:
+			text.setStyle
+			(
+					"-fx-text-fill: black"
+			);
+			break;
+		case 2:
+			text.setStyle
+			(
+					"-fx-text-fill: white"
+			);
+			break;
+		case 3:
+			text.setStyle
+			(
+					"-fx-text-fill: blue"
+			);
+			break;
+		}
 
-	
+
+
+	}
 }

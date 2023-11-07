@@ -18,6 +18,8 @@ import modele.Plantes.PLANTES;
 import modele.Zombies;
 import modele.Zombies.ZOMBIES;
 import vue.VuePvZanor;
+import vue.VuePvZanor.COULEUR;
+
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -140,6 +142,22 @@ public class ControleurPvZanor extends Controleur{
 			this.musique(5);
 		if (terrain == TERRAIN.TOIT_NUIT)
 			this.musique(6);
+	}
+
+	public void notifierChangerCouleur(COULEUR couleur) {
+		switch(couleur) {
+		case NOIR:
+			VuePvZanor.getInstance().changerCouleurText(1);
+			break;
+		case BLANC:
+			VuePvZanor.getInstance().changerCouleurText(2);
+			break;
+		case BLEU:
+			VuePvZanor.getInstance().changerCouleurText(3);
+			break;
+		}
+		
+		
 	}
 
 }
